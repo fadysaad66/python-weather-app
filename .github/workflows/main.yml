@@ -24,4 +24,9 @@ jobs:
 
       - name: run docker
         run: docker run -d -p 5000:5000 --name weather-app weather-app
+
+      - name: Test API endpoint (check if it works)
+        run: |
+         sleep 10
+         curl -v http://localhost:5000
     
