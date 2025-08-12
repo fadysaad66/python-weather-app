@@ -22,7 +22,9 @@ jobs:
          if [ $? -eq 0 ]; then
              echo "sucess";
          else
-             echo "faild"
+             echo "faild";
+             exit 1
+         fi
             
           
   
