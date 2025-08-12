@@ -23,6 +23,8 @@ jobs:
              echo " unit test sucess";
          else
              echo "unit test faild"
+             exit 1
+         fi
          
             
           
