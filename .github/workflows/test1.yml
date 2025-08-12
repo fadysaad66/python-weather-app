@@ -19,7 +19,7 @@ jobs:
       - name: run unit test
         run: 
          pytest "unit_test.py"
-         if [$? == 0]; then
+         if [$? -eq 0]; then
              echo "sucess"
          else
              necho "faild"
