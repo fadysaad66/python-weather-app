@@ -11,19 +11,18 @@ jobs:
       - name: install python
         uses: actions/setup-python@v5
         with: 
-          python -version: "3.10"
+          python-version: "3.10"
         
       - name: install dependancies
         run: |
           pip install flask requests pytest 
       - name: run unit test
-        run: pytest "unit_test.py"
-      - name: checkout result
-        run: |
-          if pytest unit_test.py; then
-            echo "sucess"
-          else:
-            echo "faild"
+        run: 
+         pytest "unit_test.py"
+         if [$? == 0]; then
+             echo "sucess"
+         else
+             necho "faild"
             
           
   
