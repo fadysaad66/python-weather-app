@@ -1,0 +1,33 @@
+name: test-app
+on: 
+  push
+  
+jobs:
+  set-up:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: install python
+        uses: actions/setup-python@v5
+        with: 
+          python -version: "3.10"
+        
+      - name: install dependancies
+        run: |
+          pip install flask requests pytest 
+      - name: run unit test
+        run: pytest "unit_test.py"
+      - name: checkout result
+        run: |
+          if pytest unit_test.py; then
+            echo "sucess"
+          else:
+            echo "faild"
+            
+          
+  
+  
+    
+  
+    
