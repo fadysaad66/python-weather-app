@@ -18,8 +18,10 @@ jobs:
           pip install flask requests pytest 
       - name: run unit test
         run: |
-         pytest "unit_test.py";
-         if [ $? -eq 0 ]; then
+         pytest "unit_test.py"
+      - name: unit test report
+        run: |
+         if pytest -eq unit_Test.py; then
              echo " unit test sucess";
          else
              echo "unit test faild"
