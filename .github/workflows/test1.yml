@@ -16,9 +16,7 @@ jobs:
       - name: install dependancies
         run: |
           pip install flask requests pytest 
-      - name: run unit test
-        run: |
-         pytest "unit_test.py"
+      
       - name: unit test report
         run: |
          if pytest -eq unit_Test.py; then
