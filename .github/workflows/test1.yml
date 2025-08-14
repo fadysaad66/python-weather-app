@@ -15,16 +15,18 @@ jobs:
         
       - name: install dependancies
         run: |
-          pip install flask requests pytest 
+          pip install flask requests pytest
+          pytest "unit_test.py"
       
-      - name: unit test report
-        run: |
-         if pytest -q unit_Test.py; then
-             echo " unit test sucess";
-         else
-             echo "unit test faild"
-             exit 1
-         fi
+      
+      # - name: unit test report
+      #   run: |
+      #    if pytest -q unit_Test.py; then
+      #        echo " unit test sucess";
+      #    else
+      #        echo "unit test faild"
+      #        exit 1
+      #    fi
          
             
           
