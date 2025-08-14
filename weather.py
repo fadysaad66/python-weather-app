@@ -36,9 +36,9 @@ class Weather:
         unit_sample = "c"
         if self.units == "imperial":
           unit_sample = "F"
-        #print(f"the temp in {self.name}  is {self.temp} {unit_sample}")
-        #print(f"the max temp in {self.name} is {self.max_temp} {unit_sample}")
-        #print(f"the min temp in {self.name} is {self.min_temp} {unit_sample}")
+        print(f"the temp in {self.name}  is {self.temp} {unit_sample}")
+        print(f"the max temp in {self.name} is {self.max_temp} {unit_sample}")
+        print(f"the min temp in {self.name} is {self.min_temp} {unit_sample}")
         return(f"<p>the temp in {self.name} is {self.temp} {unit_sample}</p>"
                f"<p>the max temp in {self.name} is {self.max_temp} {unit_sample}</p>"
                f"<p>the min temp in {self.name} is {self.min_temp} {unit_sample}</p>")
@@ -52,5 +52,6 @@ def home():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True) 
+
 
 
